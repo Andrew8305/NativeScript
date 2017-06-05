@@ -19,6 +19,8 @@ export interface Inspector {
     childNodeInserted(parentId: number, lastId: number, nodeStr: string);
     childNodeRemoved(parentId: number, nodeId: number);
     documentUpdated();
+    attributeModified(attrName: string, attrValue: string);
+    attributeRemoved(attrName: string);
 }
 
 let inspector: Inspector;
